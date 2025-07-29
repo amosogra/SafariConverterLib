@@ -10,29 +10,14 @@ let package = Package(
         .library(
             name: "ContentBlockerConverter",
             targets: ["ContentBlockerConverter", "FilterEngine"]
-        ),
-        .executable(
-            name: "ConverterTool",
-            targets: ["CommandLineWrapper"]
-        ),
-        .executable(
-            name: "FileLockTester",
-            targets: ["FileLockTester"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/gumob/PunycodeSwift.git", exact: "3.0.0"),
         .package(url: "https://github.com/apple/swift-argument-parser", exact: "1.5.0"),
         .package(url: "https://github.com/ameshkov/swift-psl", "1.1.0"..<"2.0.0"),
     ],
-    targets: [
-        .executableTarget(
-            name: "CommandLineWrapper",
-            dependencies: [
-                "FilterEngine",
-                .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            ]
-        ),
+    targets: [ 
         .target(
             name: "ContentBlockerConverter",
             dependencies: [
@@ -45,10 +30,6 @@ let package = Package(
                 "ContentBlockerConverter",
                 .product(name: "PublicSuffixList", package: "swift-psl"),
             ]
-        ),
-        .executableTarget(
-            name: "FileLockTester",
-            dependencies: ["FilterEngine"]
         ),
         .testTarget(
             name: "ContentBlockerConverterTests",
