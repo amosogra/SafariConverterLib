@@ -1,0 +1,13 @@
+.DS_Store
+
+# Swift
+/.swiftpm
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+/.idea
+
+# Ignore smart IDEs
+.windsurfrules
+.cursorrules
