@@ -21,10 +21,10 @@
     {
       "identity" : "swift-psl",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ameshkov/swift-psl",
+      "location" : "https://github.com/amosogra/swift-psl",
       "state" : {
-        "revision" : "58eb614f348d30bc78db6376947560a7a7338f74",
-        "version" : "1.1.0"
+        "revision" : "3e5491ff4f515c1b4599ee5c993d5a7038081f3e",
+        "version" : "2.0.0"
       }
     }
   ],
